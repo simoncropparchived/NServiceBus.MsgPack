@@ -1,0 +1,1 @@
+# NServiceBus.MsgPack.Cli
