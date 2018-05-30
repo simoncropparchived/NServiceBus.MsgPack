@@ -6,13 +6,11 @@ using NServiceBus.Settings;
 
 namespace NServiceBus
 {
-
     /// <summary>
     /// Extensions for <see cref="SerializationExtensions{T}"/> to manipulate how messages are serialized.
     /// </summary>
     public static class MsgPackConfigurationExtensions
     {
-
         /// <summary>
         /// Configures the <see cref="SerializationContext"/> to use.
         /// </summary>

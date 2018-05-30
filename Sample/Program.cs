@@ -9,8 +9,6 @@ class Program
     {
         var configuration = new EndpointConfiguration("MsgPackSerializerSample");
         configuration.UseSerialization<MsgPackSerializer>();
-        configuration.EnableInstallers();
-        configuration.SendFailedMessagesTo("error");
         configuration.UsePersistence<InMemoryPersistence>();
         configuration.UseTransport<LearningTransport>();
 
