@@ -1,4 +1,4 @@
-![Icon](https://raw.githubusercontent.com/SimonCropp/NServiceBus.MessagePack/master/Icon/package_icon.png)
+![Icon](https://raw.githubusercontent.com/NServiceBusExtensions/NServiceBus.MessagePack/master/icon.png)
 
 NServiceBus.MsgPack
 ===========================
@@ -15,7 +15,7 @@ https://nuget.org/packages/NServiceBus.MsgPack/
 
 ## Documentation
 
-https://docs.particular.net/nservicebus/serialization/msgpack
+https://docs.particular.net/nuget/NServiceBus.MsgPack
 
 
 ## Icon
