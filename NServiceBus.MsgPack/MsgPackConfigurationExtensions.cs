@@ -20,7 +20,7 @@ namespace NServiceBus
         {
             Guard.AgainstNull(config, nameof(config));
             var settings = config.GetSettings();
-            settings.Set<SerializationContext>(context);
+            settings.Set(context);
         }
 
         internal static SerializationContext GetContext(this ReadOnlySettings settings)
