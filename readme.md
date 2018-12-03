@@ -1,9 +1,4 @@
-![Icon](https://raw.githubusercontent.com/NServiceBusExtensions/NServiceBus.MessagePack/master/icon.png)
-
-NServiceBus.MsgPack
-===========================
-
-Add support for [NServiceBus](https://docs.particular.net/nservicebus/) message serialization via [MessagePack](https://github.com/msgpack/msgpack-cli)
+<img src="https://raw.github.com/NServiceBusExtensions/NServiceBus.MessagePack/master/src/icon.png" height="25px"> Add support for [NServiceBus](https://docs.particular.net/nservicebus/) message serialization via [MessagePack](https://github.com/msgpack/msgpack-cli)
 
 
 <!--- StartOpenCollectiveBackers -->
