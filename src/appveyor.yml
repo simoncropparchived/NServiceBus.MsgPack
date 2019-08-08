@@ -2,7 +2,7 @@ image: Visual Studio 2019
 skip_commits:
   message:
     - /Merge pull request.*/
-    - doco
+    - /doco/
 build_script:
 - ps: >-
     dotnet build src --configuration Release
