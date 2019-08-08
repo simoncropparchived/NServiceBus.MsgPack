@@ -1,4 +1,4 @@
-<img src="https://raw.github.com/NServiceBusExtensions/NServiceBus.MessagePack/master/src/icon.png" height="25px"> Add support for [NServiceBus](https://docs.particular.net/nservicebus/) message serialization via [MessagePack](https://github.com/msgpack/msgpack-cli)
+<img src="/src/icon.png" height="25px"> Add support for [NServiceBus](https://docs.particular.net/nservicebus/) message serialization via [MessagePack](https://github.com/msgpack/msgpack-cli)
 
 <!--- StartOpenCollectiveBackers -->
 
@@ -26,9 +26,9 @@ Thanks to all the backing developers! Support this project by [becoming a patron
 <a href="#" id="endofbacking"></a>
 
 
-## The NuGet package [![NuGet Status](http://img.shields.io/nuget/v/NServiceBus.MsgPack.svg)](https://www.nuget.org/packages/NServiceBus.MsgPack/)
+## NuGet package
 
-https://nuget.org/packages/NServiceBus.MsgPack/
+https://nuget.org/packages/NServiceBus.MsgPack/ [![NuGet Status](http://img.shields.io/nuget/v/NServiceBus.MsgPack.svg)](https://www.nuget.org/packages/NServiceBus.MsgPack/)
 
 
 ## Documentation
@@ -38,4 +38,4 @@ https://docs.particular.net/nuget/NServiceBus.MsgPack
 
 ## Icon
 
-<a href="http://thenounproject.com/term/backpack/763062/" target="_blank">Backpack</a> designed by <a href="http://thenounproject.com/made.somewhere/" target="_blank">Made Somewhere</a> from The Noun Project.
+[Backpack](https://thenounproject.com/term/backpack/763062/) designed by [Made Somewhere](https://thenounproject.com/made.somewhere/) from [The Noun Project](https://thenounproject.com).
