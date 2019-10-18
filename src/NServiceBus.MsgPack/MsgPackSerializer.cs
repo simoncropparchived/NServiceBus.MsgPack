@@ -8,7 +8,8 @@ namespace NServiceBus.MsgPack
     /// <summary>
     /// Defines the capabilities of the MessagePack serializer
     /// </summary>
-    public class MsgPackSerializer : SerializationDefinition
+    public class MsgPackSerializer :
+        SerializationDefinition
     {
         /// <summary>
         /// <see cref="SerializationDefinition.Configure"/>

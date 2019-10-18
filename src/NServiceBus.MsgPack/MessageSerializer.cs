@@ -7,7 +7,8 @@ using System.IO;
 using System.Linq;
 using NServiceBus.Serialization;
 
-class MessageSerializer : IMessageSerializer
+class MessageSerializer :
+    IMessageSerializer
 {
     SerializationContext context;
     ConcurrentDictionary<RuntimeTypeHandle, Func<object>> emptyTypesBag = new ConcurrentDictionary<RuntimeTypeHandle, Func<object>>();

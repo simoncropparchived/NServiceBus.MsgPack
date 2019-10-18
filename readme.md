@@ -5,7 +5,24 @@ Source File: /readme.source.md
 To change this file edit the source file and then run MarkdownSnippets.
 -->
 
-<img src="/src/icon.png" height="25px"> Add support for [NServiceBus](https://docs.particular.net/nservicebus/) message serialization via [MessagePack](https://github.com/msgpack/msgpack-cli)
+# <img src="/src/icon.png" height="30px"> NServiceBus.MsgPack
+
+[![Build status](https://ci.appveyor.com/api/projects/status/kw7arku40y7ub2ld/branch/master?svg=true)](https://ci.appveyor.com/project/SimonCropp/NServiceBus.MsgPack)
+[![NuGet Status](https://img.shields.io/nuget/v/NServiceBus.MsgPack.svg?cacheSeconds=86400)](https://www.nuget.org/packages/NServiceBus.MsgPack/)
+
+Add support for [NServiceBus](https://docs.particular.net/nservicebus/) message serialization via [MessagePack](https://github.com/msgpack/msgpack-cli)
+
+<!-- toc -->
+## Contents
+
+  * [Community backed](#community-backed)
+    * [Sponsors](#sponsors)
+    * [Patrons](#patrons)
+  * [Usage](#usage)
+    * [Custom Settings](#custom-settings)
+    * [Custom content key](#custom-content-key)
+<!-- endtoc -->
+
 
 <!--- StartOpenCollectiveBackers -->
 
@@ -33,11 +50,6 @@ Thanks to all the backing developers! Support this project by [becoming a patron
 <a href="#" id="endofbacking"></a>
 
 
-## NuGet package
-
-https://nuget.org/packages/NServiceBus.MsgPack/ [![NuGet Status](https://img.shields.io/nuget/v/NServiceBus.MsgPack.svg)](https://www.nuget.org/packages/NServiceBus.MsgPack/)
-
-
 ## Usage
 
 <!-- snippet: MsgPackSerialization -->
@@ -48,7 +60,14 @@ endpointConfiguration.UseSerialization<MsgPackSerializer>();
 <sup>[snippet source](/src/Tests/Snippets/Usage.cs#L9-L13) / [anchor](#snippet-msgpackserialization)</sup>
 <!-- endsnippet -->
 
-include: interface-not-supported
+This serializer does not support [messages defined as interfaces](https://docs.particular.net/nservicebus/messaging/messages-as-interfaces.md). If an explicit interface is sent, an exception will be thrown with the following message:
+
+```
+Interface based message are not supported.
+Create a class that implements the desired interface
+```
+
+Instead, use a public class with the same contract as the interface. The class can optionally implement any required interfaces.
 
 
 ### Custom Settings
@@ -69,7 +88,9 @@ serialization.Context(context);
 <!-- endsnippet -->
 
 
-include: custom-contenttype-key
+### Custom content key
+
+When using [additional deserializers](https://docs.particular.net/nservicebus/serialization/#specifying-additional-deserializers) or transitioning between different versions of the same serializer it can be helpful to take explicit control over the content type a serializer passes to NServiceBus (to be used for the [ContentType header](https://docs.particular.net/nservicebus/messaging/headers.md#serialization-headers-nservicebus-contenttype)).
 
 <!-- snippet: MsgPackContentTypeKey -->
 <a id='snippet-msgpackcontenttypekey'/></a>
@@ -79,6 +100,11 @@ serialization.ContentTypeKey("custom-key");
 ```
 <sup>[snippet source](/src/Tests/Snippets/Usage.cs#L32-L37) / [anchor](#snippet-msgpackcontenttypekey)</sup>
 <!-- endsnippet -->
+
+
+## Release Notes
+
+See [closed milestones](../../milestones?state=closed).
 
 
 ## Icon

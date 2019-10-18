@@ -24,7 +24,7 @@ class Program
             TheId = Guid.NewGuid(),
         };
         await endpoint.SendLocal(startSaga);
-        Console.WriteLine("\r\nPress any key to stop program\r\n");
+        Console.WriteLine("Press any key to stop program");
         Console.Read();
         await endpoint.Stop();
     }
