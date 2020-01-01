@@ -20,9 +20,7 @@ Add support for [NServiceBus](https://docs.particular.net/nservicebus/) message 
     * [Patrons](#patrons)
   * [Usage](#usage)
     * [Custom Settings](#custom-settings)
-    * [Custom content key](#custom-content-key)
-<!-- endtoc -->
-
+    * [Custom content key](#custom-content-key)<!-- endtoc -->
 
 <!--- StartOpenCollectiveBackers -->
 
@@ -31,7 +29,7 @@ Add support for [NServiceBus](https://docs.particular.net/nservicebus/) message 
 
 ## Community backed
 
-**It is expected that all developers [become a Patron](https://opencollective.com/nservicebusextensions/order/6976) to use any of these libraries. [Go to licensing FAQ](https://github.com/NServiceBusExtensions/Home/blob/master/readme.md#licensingpatron-faq)**
+**It is expected that all developers [become a Patron](https://opencollective.com/nservicebusextensions/order/6976) to use any of these libraries. [Go to licensing FAQ](https://github.com/NServiceBusExtensions/Home/#licensingpatron-faq)**
 
 
 ### Sponsors
@@ -50,14 +48,19 @@ Thanks to all the backing developers! Support this project by [becoming a patron
 <a href="#" id="endofbacking"></a>
 
 
+## NuGet package
+
+https://nuget.org/packages/NServiceBus.MsgPack/
+
+
 ## Usage
 
 <!-- snippet: MsgPackSerialization -->
 <a id='snippet-msgpackserialization'/></a>
 ```cs
-endpointConfiguration.UseSerialization<MsgPackSerializer>();
+configuration.UseSerialization<MsgPackSerializer>();
 ```
-<sup>[snippet source](/src/Tests/Snippets/Usage.cs#L9-L13) / [anchor](#snippet-msgpackserialization)</sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L9-L13' title='File snippet `msgpackserialization` was extracted from'>snippet source</a> | <a href='#snippet-msgpackserialization' title='Navigate to start of snippet `msgpackserialization`'>anchor</a></sup>
 <!-- endsnippet -->
 
 This serializer does not support [messages defined as interfaces](https://docs.particular.net/nservicebus/messaging/messages-as-interfaces). If an explicit interface is sent, an exception will be thrown with the following message:
@@ -81,10 +84,10 @@ var context = new SerializationContext
 {
     DefaultDateTimeConversionMethod = DateTimeConversionMethod.UnixEpoc
 };
-var serialization = endpointConfiguration.UseSerialization<MsgPackSerializer>();
+var serialization = configuration.UseSerialization<MsgPackSerializer>();
 serialization.Context(context);
 ```
-<sup>[snippet source](/src/Tests/Snippets/Usage.cs#L18-L27) / [anchor](#snippet-msgpackcustomsettings)</sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L18-L27' title='File snippet `msgpackcustomsettings` was extracted from'>snippet source</a> | <a href='#snippet-msgpackcustomsettings' title='Navigate to start of snippet `msgpackcustomsettings`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
@@ -95,10 +98,10 @@ When using [additional deserializers](https://docs.particular.net/nservicebus/se
 <!-- snippet: MsgPackContentTypeKey -->
 <a id='snippet-msgpackcontenttypekey'/></a>
 ```cs
-var serialization = endpointConfiguration.UseSerialization<MsgPackSerializer>();
+var serialization = configuration.UseSerialization<MsgPackSerializer>();
 serialization.ContentTypeKey("custom-key");
 ```
-<sup>[snippet source](/src/Tests/Snippets/Usage.cs#L32-L37) / [anchor](#snippet-msgpackcontenttypekey)</sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L32-L37' title='File snippet `msgpackcontenttypekey` was extracted from'>snippet source</a> | <a href='#snippet-msgpackcontenttypekey' title='Navigate to start of snippet `msgpackcontenttypekey`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
