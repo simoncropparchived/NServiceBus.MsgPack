@@ -4,6 +4,5 @@
     <Version>3.0.4</Version>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <PackageTags>NServiceBus, MessagePack</PackageTags>
-    <PackageLicenseFile>license.txt</PackageLicenseFile>
   </PropertyGroup>
 </Project>
