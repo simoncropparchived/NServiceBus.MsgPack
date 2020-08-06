@@ -61,7 +61,7 @@ https://nuget.org/packages/NServiceBus.MsgPack/
 ## Usage
 
 <!-- snippet: MsgPackSerialization -->
-<a id='snippet-msgpackserialization'/></a>
+<a id='snippet-msgpackserialization'></a>
 ```cs
 configuration.UseSerialization<MsgPackSerializer>();
 ```
@@ -83,7 +83,7 @@ Instead, use a public class with the same contract as the interface. The class c
 Customizes the instance of `SerializerOptions` used for serialization.
 
 <!-- snippet: MsgPackCustomSettings -->
-<a id='snippet-msgpackcustomsettings'/></a>
+<a id='snippet-msgpackcustomsettings'></a>
 ```cs
 var context = new SerializationContext
 {
@@ -101,7 +101,7 @@ serialization.Context(context);
 When using [additional deserializers](https://docs.particular.net/nservicebus/serialization/#specifying-additional-deserializers) or transitioning between different versions of the same serializer it can be helpful to take explicit control over the content type a serializer passes to NServiceBus (to be used for the [ContentType header](https://docs.particular.net/nservicebus/messaging/headers#serialization-headers-nservicebus-contenttype)).
 
 <!-- snippet: MsgPackContentTypeKey -->
-<a id='snippet-msgpackcontenttypekey'/></a>
+<a id='snippet-msgpackcontenttypekey'></a>
 ```cs
 var serialization = configuration.UseSerialization<MsgPackSerializer>();
 serialization.ContentTypeKey("custom-key");
