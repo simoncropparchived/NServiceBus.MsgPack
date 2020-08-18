@@ -50,7 +50,7 @@ Support is available via a [Tidelift Subscription](https://tidelift.com/subscrip
   * [Usage](#usage)
     * [Custom Settings](#custom-settings)
     * [Custom content key](#custom-content-key)
-  * [Security contact information](#security-contact-information)<!-- endtoc -->
+  * [Security contact information](#security-contact-information)<!-- endToc -->
 
 
 ## NuGet package
@@ -66,7 +66,7 @@ https://nuget.org/packages/NServiceBus.MsgPack/
 configuration.UseSerialization<MsgPackSerializer>();
 ```
 <sup><a href='/src/Tests/Snippets/Usage.cs#L9-L13' title='File snippet `msgpackserialization` was extracted from'>snippet source</a> | <a href='#snippet-msgpackserialization' title='Navigate to start of snippet `msgpackserialization`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 This serializer does not support [messages defined as interfaces](https://docs.particular.net/nservicebus/messaging/messages-as-interfaces). If an explicit interface is sent, an exception will be thrown with the following message:
 
@@ -93,7 +93,7 @@ var serialization = configuration.UseSerialization<MsgPackSerializer>();
 serialization.Context(context);
 ```
 <sup><a href='/src/Tests/Snippets/Usage.cs#L18-L27' title='File snippet `msgpackcustomsettings` was extracted from'>snippet source</a> | <a href='#snippet-msgpackcustomsettings' title='Navigate to start of snippet `msgpackcustomsettings`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 
 ### Custom content key
@@ -107,7 +107,7 @@ var serialization = configuration.UseSerialization<MsgPackSerializer>();
 serialization.ContentTypeKey("custom-key");
 ```
 <sup><a href='/src/Tests/Snippets/Usage.cs#L32-L37' title='File snippet `msgpackcontenttypekey` was extracted from'>snippet source</a> | <a href='#snippet-msgpackcontenttypekey' title='Navigate to start of snippet `msgpackcontenttypekey`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 
 ## Security contact information
