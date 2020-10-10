@@ -61,11 +61,11 @@ https://nuget.org/packages/NServiceBus.MsgPack/
 ## Usage
 
 <!-- snippet: MsgPackSerialization -->
-<a id='msgpackserialization'></a>
+<a id='snippet-msgpackserialization'></a>
 ```cs
 configuration.UseSerialization<MsgPackSerializer>();
 ```
-<sup><a href='/src/Tests/Snippets/Usage.cs#L9-L13' title='Snippet source file'>snippet source</a> | <a href='#msgpackserialization' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L9-L13' title='Snippet source file'>snippet source</a> | <a href='#snippet-msgpackserialization' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 This serializer does not support [messages defined as interfaces](https://docs.particular.net/nservicebus/messaging/messages-as-interfaces). If an explicit interface is sent, an exception will be thrown with the following message:
@@ -83,7 +83,7 @@ Instead, use a public class with the same contract as the interface. The class c
 Customizes the instance of `SerializerOptions` used for serialization.
 
 <!-- snippet: MsgPackCustomSettings -->
-<a id='msgpackcustomsettings'></a>
+<a id='snippet-msgpackcustomsettings'></a>
 ```cs
 var context = new SerializationContext
 {
@@ -92,7 +92,7 @@ var context = new SerializationContext
 var serialization = configuration.UseSerialization<MsgPackSerializer>();
 serialization.Context(context);
 ```
-<sup><a href='/src/Tests/Snippets/Usage.cs#L18-L27' title='Snippet source file'>snippet source</a> | <a href='#msgpackcustomsettings' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L18-L27' title='Snippet source file'>snippet source</a> | <a href='#snippet-msgpackcustomsettings' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -101,12 +101,12 @@ serialization.Context(context);
 When using [additional deserializers](https://docs.particular.net/nservicebus/serialization/#specifying-additional-deserializers) or transitioning between different versions of the same serializer it can be helpful to take explicit control over the content type a serializer passes to NServiceBus (to be used for the [ContentType header](https://docs.particular.net/nservicebus/messaging/headers#serialization-headers-nservicebus-contenttype)).
 
 <!-- snippet: MsgPackContentTypeKey -->
-<a id='msgpackcontenttypekey'></a>
+<a id='snippet-msgpackcontenttypekey'></a>
 ```cs
 var serialization = configuration.UseSerialization<MsgPackSerializer>();
 serialization.ContentTypeKey("custom-key");
 ```
-<sup><a href='/src/Tests/Snippets/Usage.cs#L32-L37' title='Snippet source file'>snippet source</a> | <a href='#msgpackcontenttypekey' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L32-L37' title='Snippet source file'>snippet source</a> | <a href='#snippet-msgpackcontenttypekey' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
