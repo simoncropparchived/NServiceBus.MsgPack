@@ -39,11 +39,6 @@ Thanks to all the backing developers. Support this project by [becoming a patron
 <!--- EndOpenCollectiveBackers -->
 
 
-## Support via TideLift
-
-Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-nservicebus.msgpack?utm_source=nuget-nservicebus.msgpack&utm_medium=referral&utm_campaign=enterprise).
-
-
 ## NuGet package
 
 https://nuget.org/packages/NServiceBus.MsgPack/
