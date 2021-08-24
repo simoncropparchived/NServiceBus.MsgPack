@@ -17,7 +17,7 @@ namespace NServiceBus.MsgPack
         public override Func<IMessageMapper, IMessageSerializer> Configure(ReadOnlySettings settings)
         {
             Guard.AgainstNull(settings, nameof(settings));
-            return mapper =>
+            return _ =>
             {
                 var context = settings.GetContext();
                 var contentTypeKey = settings.GetContentTypeKey();

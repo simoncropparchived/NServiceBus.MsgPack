@@ -11,9 +11,9 @@ class MessageSerializer :
     IMessageSerializer
 {
     SerializationContext context;
-    ConcurrentDictionary<RuntimeTypeHandle, Func<object>> emptyTypesBag = new ConcurrentDictionary<RuntimeTypeHandle, Func<object>>();
+    ConcurrentDictionary<RuntimeTypeHandle, Func<object>> emptyTypesBag = new();
 
-    public MessageSerializer(string contentType, SerializationContext context)
+    public MessageSerializer(string? contentType, SerializationContext? context)
     {
         if (context == null)
         {
@@ -38,7 +38,7 @@ class MessageSerializer :
         var messageType = message.GetType();
         if (messageType.Name.EndsWith("__impl"))
         {
-            throw new Exception("Interface based message are not supported. Create a class that implements the desired interface.");
+            throw new("Interface based message are not supported. Create a class that implements the desired interface.");
         }
 
         var handle = messageType.TypeHandle;
@@ -93,7 +93,7 @@ class MessageSerializer :
         {
             constructor = emptyTypesBag.GetOrAdd(
                 key: typeHandle,
-                valueFactory: handle => ConstructorDelegateBuilder.BuildConstructorFunc(messageType));
+                valueFactory: _ => ConstructorDelegateBuilder.BuildConstructorFunc(messageType));
             return constructor();
         }
 

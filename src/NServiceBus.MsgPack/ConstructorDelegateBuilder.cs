@@ -8,7 +8,7 @@ static class ConstructorDelegateBuilder
         var constructor = type.GetConstructor(Type.EmptyTypes);
         if (constructor == null)
         {
-            throw new Exception($"There is no empty constructor: {type.FullName}");
+            throw new($"There is no empty constructor: {type.FullName}");
         }
         var dynamic = new DynamicMethod(string.Empty,
             type,
