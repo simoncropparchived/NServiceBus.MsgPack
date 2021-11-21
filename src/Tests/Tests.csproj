@@ -5,11 +5,11 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
     <PackageReference Include="Xunit" Version="2.4.1" />
-    <PackageReference Include="Verify.Xunit" Version="13.1.0" />
-    <PackageReference Include="MarkdownSnippets.MsBuild" Version="24.1.0" PrivateAssets="all" />
+    <PackageReference Include="Verify.Xunit" Version="14.4.0" />
+    <PackageReference Include="MarkdownSnippets.MsBuild" Version="24.2.1" PrivateAssets="all" />
     <ProjectReference Include="..\NServiceBus.MsgPack\NServiceBus.MsgPack.csproj" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.59" PrivateAssets="All" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.61" PrivateAssets="all" />
   </ItemGroup>
 </Project>
