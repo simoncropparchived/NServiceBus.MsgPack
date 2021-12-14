@@ -1,10 +1,5 @@
-﻿using System.Collections.Concurrent;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 using MsgPack.Serialization;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using NServiceBus.Serialization;
 
 class MessageSerializer :

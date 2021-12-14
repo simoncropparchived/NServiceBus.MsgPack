@@ -1,6 +1,5 @@
 ﻿using NServiceBus.MessageInterfaces;
 using NServiceBus.Settings;
-using System;
 using NServiceBus.Serialization;
 
 namespace NServiceBus.MsgPack
