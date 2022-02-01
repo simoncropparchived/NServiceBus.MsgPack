@@ -1,6 +1,6 @@
 # <img src="/src/icon.png" height="30px"> NServiceBus.MsgPack
 
-[![Build status](https://ci.appveyor.com/api/projects/status/kw7arku40y7ub2ld/branch/master?svg=true)](https://ci.appveyor.com/project/SimonCropp/nservicebus-msgpack)
+[![Build status](https://ci.appveyor.com/api/projects/status/kw7arku40y7ub2ld/branch/main?svg=true)](https://ci.appveyor.com/project/SimonCropp/nservicebus-msgpack)
 [![NuGet Status](https://img.shields.io/nuget/v/NServiceBus.MsgPack.svg)](https://www.nuget.org/packages/NServiceBus.MsgPack/)
 
 Add support for [NServiceBus](https://docs.particular.net/nservicebus/) message serialization via [MessagePack](https://github.com/msgpack/msgpack-cli)
