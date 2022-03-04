@@ -2,25 +2,24 @@
 using NServiceBus.Settings;
 using NServiceBus.Serialization;
 
-namespace NServiceBus.MsgPack
+namespace NServiceBus.MsgPack;
+
+/// <summary>
+/// Defines the capabilities of the MessagePack serializer
+/// </summary>
+public class MsgPackSerializer :
+    SerializationDefinition
 {
     /// <summary>
-    /// Defines the capabilities of the MessagePack serializer
+    /// <see cref="SerializationDefinition.Configure"/>
     /// </summary>
-    public class MsgPackSerializer :
-        SerializationDefinition
+    public override Func<IMessageMapper, IMessageSerializer> Configure(ReadOnlySettings settings)
     {
-        /// <summary>
-        /// <see cref="SerializationDefinition.Configure"/>
-        /// </summary>
-        public override Func<IMessageMapper, IMessageSerializer> Configure(ReadOnlySettings settings)
+        return _ =>
         {
-            return _ =>
-            {
-                var context = settings.GetContext();
-                var contentTypeKey = settings.GetContentTypeKey();
-                return new MessageSerializer(contentTypeKey, context);
-            };
-        }
+            var context = settings.GetContext();
+            var contentTypeKey = settings.GetContentTypeKey();
+            return new MessageSerializer(contentTypeKey, context);
+        };
     }
 }
