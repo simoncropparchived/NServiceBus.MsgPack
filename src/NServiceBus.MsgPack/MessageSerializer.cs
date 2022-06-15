@@ -56,18 +56,14 @@ class MessageSerializer :
         serializer.Pack(stream, message);
     }
 
-    static bool IsEmptyTypeException(SerializationException exception)
-    {
-        return exception.Message.Contains("because it does not have any serializable fields nor properties.");
-    }
+    static bool IsEmptyTypeException(SerializationException exception) =>
+        exception.Message.Contains("because it does not have any serializable fields nor properties.");
 
-    public object[] Deserialize(Stream stream, IList<Type> messageTypes)
-    {
-        return new[]
+    public object[] Deserialize(Stream stream, IList<Type> messageTypes) =>
+        new[]
         {
             DeserializeInner(stream, messageTypes)
         };
-    }
 
     object DeserializeInner(Stream stream, IList<Type> messageTypes)
     {

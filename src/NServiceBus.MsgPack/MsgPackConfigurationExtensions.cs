@@ -22,10 +22,8 @@ public static class MsgPackConfigurationExtensions
         settings.Set(context);
     }
 
-    internal static SerializationContext GetContext(this ReadOnlySettings settings)
-    {
-        return settings.GetOrDefault<SerializationContext>();
-    }
+    internal static SerializationContext GetContext(this ReadOnlySettings settings) =>
+        settings.GetOrDefault<SerializationContext>();
 
     /// <summary>
     /// Configures string to use for <see cref="Headers.ContentType"/> headers.
@@ -42,8 +40,6 @@ public static class MsgPackConfigurationExtensions
         settings.Set("NServiceBus.MessagePack.ContentTypeKey", contentTypeKey);
     }
 
-    internal static string GetContentTypeKey(this ReadOnlySettings settings)
-    {
-        return settings.GetOrDefault<string>("NServiceBus.MessagePack.ContentTypeKey");
-    }
+    internal static string GetContentTypeKey(this ReadOnlySettings settings) =>
+        settings.GetOrDefault<string>("NServiceBus.MessagePack.ContentTypeKey");
 }

@@ -51,7 +51,7 @@ https://nuget.org/packages/NServiceBus.MsgPack/
 ```cs
 configuration.UseSerialization<MsgPackSerializer>();
 ```
-<sup><a href='/src/Tests/Snippets/Usage.cs#L9-L13' title='Snippet source file'>snippet source</a> | <a href='#snippet-msgpackserialization' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Usage.cs#L9-L13' title='Snippet source file'>snippet source</a> | <a href='#snippet-msgpackserialization' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 This serializer does not support [messages defined as interfaces](https://docs.particular.net/nservicebus/messaging/messages-as-interfaces). If an explicit interface is sent, an exception will be thrown with the following message:
@@ -78,7 +78,7 @@ var context = new SerializationContext
 var serialization = configuration.UseSerialization<MsgPackSerializer>();
 serialization.Context(context);
 ```
-<sup><a href='/src/Tests/Snippets/Usage.cs#L18-L27' title='Snippet source file'>snippet source</a> | <a href='#snippet-msgpackcustomsettings' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Usage.cs#L18-L27' title='Snippet source file'>snippet source</a> | <a href='#snippet-msgpackcustomsettings' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -92,7 +92,7 @@ When using [additional deserializers](https://docs.particular.net/nservicebus/se
 var serialization = configuration.UseSerialization<MsgPackSerializer>();
 serialization.ContentTypeKey("custom-key");
 ```
-<sup><a href='/src/Tests/Snippets/Usage.cs#L32-L37' title='Snippet source file'>snippet source</a> | <a href='#snippet-msgpackcontenttypekey' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Usage.cs#L32-L37' title='Snippet source file'>snippet source</a> | <a href='#snippet-msgpackcontenttypekey' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
